@@ -56,9 +56,9 @@ class SalomonBottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    return SafeArea(
-      minimum: margin,
-      child: Row(
+    return Container(
+        padding: EdgeInsets.only(right: 20,left: 20),
+        child:Row(
         /// Using a different alignment when there are 2 items or less
         /// so it behaves the same as BottomNavigationBar.
         mainAxisAlignment: items.length <= 2
@@ -153,8 +153,7 @@ class SalomonBottomBar extends StatelessWidget {
               },
             ),
         ],
-      ),
-    );
+    ));
   }
 }
 
